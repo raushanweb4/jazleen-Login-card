@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>jazleen Login</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .login_sec {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #000000, #330000);
+      background: url(./images/airport-terminal.jpg);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-size: cover;
+      position: relative;
+    }
+
+    .login_sec::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: #000;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      opacity: .5;
+
+    }
+
+    .form_sec {
+    display: flex
+;
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 20px red;
+    min-width: 800px;
+    width: 100%;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 9;
+}
+.left-section {
+    background: #000;
+    flex: 1;
+    padding: 100px 40px;
+    display: flex
+;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+    .left-section h1 {
+      font-size: 48px;
+      margin-top: 20px;
+      text-transform: capitalize;
+    }
+
+    .left-section p {
+      font-size: 18px;
+    }
+
+    .logo-box {
+      background: #cc0000;
+      padding: 20px;
+      border-radius: 10px;
+      width: 80px;
+      height: 80px;
+      line-height: 0;
+      text-align: center;
+    }
+
+    .logo-box h1 {
+      font-size: 48px;
+      color: white;
+    }
+
+    .right-section {
+      background: white;
+      color: black;
+      flex: 1;padding: 100px 40px;
+    }
+
+    .right-section h2 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+    .form-group {
+      position: relative;
+      margin-bottom: 30px;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 10px 10px 10px 5px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      /* background: #f0f0f0; */
+      outline: none;
+    }
+
+    .form-label {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      pointer-events: none;
+      color: gray;
+      transition: 0.3s ease all;
+      background: white;
+      padding: 0 5px;
+    }
+
+    .form-input:focus+.form-label,
+    .form-input:not(:placeholder-shown)+.form-label {
+      top: -10px;
+      left: 5px;
+      font-size: 12px;
+      color: #cc0000;
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #3366ff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .login-btn:hover {
+      background-color: #254eda;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .left-section,
+      .right-section {
+        flex: none;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login_sec">
+    <div class="container">
+      <div class="form_sec">
+
+
+        <div class="left-section">
+          <div class="logo-box">
+            <h1>J</h1>
+          </div>
+          <h1>jaz Travels</h1>
+          <p>Welcome !</p>
+        </div>
+        <div class="right-section">
+          <h2>Login</h2>
+          <form>
+            <div class="form-group">
+              <input type="text" id="username" class="form-input" placeholder=" " required />
+              <label for="username" class="form-label">Username</label>
+            </div>
+            <div class="form-group">
+              <input type="password" id="password" class="form-input" placeholder=" " required />
+              <label for="password" class="form-label">Password</label>
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
